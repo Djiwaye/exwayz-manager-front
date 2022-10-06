@@ -1,0 +1,184 @@
+{
+  "en": {
+    "common": {
+      "actions": {
+        "done": {
+          "label": "Done",
+          "icon": "mdi-check"
+        },
+        "ok": {
+          "label": "OK",
+          "icon": "mdi-check"
+        },
+        "cancel": {
+          "label": "Cancel",
+          "icon": "mdi-cancel"
+        },
+        "save": {
+          "label": "Save",
+          "icon": "mdi-content-save"
+        },
+        "apply": {
+          "label": "Apply changes",
+          "icon": "mdi-content-save"
+        },
+        "send": {
+          "label": "Send",
+          "icon": "mdi-send"
+        },
+        "back": {
+          "label": "Back",
+          "icon": "mdi-arrow-left"
+        },
+        "next": {
+          "label": "Next",
+          "icon": "mdi-arrow-right"
+        },
+        "close": {
+          "label": "Close",
+          "icon": "mdi-close"
+        },
+        "edit": {
+          "label": "Edit",
+          "icon": "mdi-pencil"
+        },
+        "search": {
+          "label": "Search",
+          "icon": "mdi-magnify"
+        },
+        "delete": {
+          "label": "Delete",
+          "icon": "mdi-trash-can"
+        },
+        "add": {
+          "label": "Add",
+          "icon": "mdi-plus"
+        },
+        "more": {
+          "label": "More",
+          "icon": "mdi-playlist-plus"
+        },
+        "view": {
+          "label": "View",
+          "icon": "mdi-eye"
+        },
+        "comment": {
+          "label": "Comment",
+          "icon": "mdi-message-text"
+        },
+        "email": {
+          "label": "Send email",
+          "icon": "mdi-email"
+        },
+        "archive": {
+          "label": "Archive",
+          "icon": "mdi-archive-arrow-down-outline"
+        },
+        "checkAll": {
+          "label": "Check all",
+          "icon": "mdi-check-all"
+        },
+        "connect": {
+          "label": "Connect",
+          "icon": "mdi-lan-connect"
+        },
+        "disconnect": {
+          "label": "Disconnect",
+          "icon": "mdi-lan-disconnect"
+        },
+        "start": {
+          "label": "Start",
+          "icon": "mdi-play"
+        },
+        "stop": {
+          "label": "Stop",
+          "icon": "mdi-stop"
+        },
+        "reset": {
+          "label": "Reset",
+          "icon": "mdi-refresh"
+        },
+        "clear": {
+          "label": "Clear",
+          "icon": "mdi-eraser-variant"
+        },
+        "load": {
+          "label": "Load",
+          "icon": "mdi-upload"
+        },
+        "upload": {
+          "label": "Upload",
+          "icon": "mdi-upload"
+        },
+        "download": {
+          "label": "Download",
+          "icon": "mdi-download"
+        },
+        "export": {
+          "label": "Export",
+          "icon": "mdi-download"
+        }
+      },
+      "AppName": "Slam Manager",
+      "icons": {
+        "home": "mdi-home"
+      },
+      "InternalError": {
+        "title": "An error occured",
+        "cta": "Return home",
+        "INVALID_APP_CONFIG": "Invalid server configuration",
+        "INVALID_SSO_CODE": "Invalid SSO code parameter",
+        "IE11": "Sorry, Internet Explorer 11 is not supported. Please use another browser."
+      },
+      "PageNotFound": {
+        "error": "404 - Page Not Found",
+        "paragraph": "Sorry we couldn't find this page. It may not exist. Check the address or return to the home page by clicking on the button below.",
+        "cta": "Return home",
+        "title": "Are you lost ?"
+      },
+      "NavBar": {
+        "homeLabel": "Home"
+      },
+      "Footer": {
+        "copyrights": "Slam Manager services - ©{year} DemBoost",
+        "termsLabel": "Terms of use",
+        "privacyLabel": "Privacy policy"
+      }
+    },
+    "home": {
+      "LandingPage": {
+        "metaTitle": "Home",
+        "title": "Load a map and start reloc or use SLAM"
+      },
+      "SlamActions": {
+        "cardTitle": "SLAM actions",
+        "startSlam": "Start",
+        "stopSlam": "Stop"
+      },
+      "MapSelect": {
+        "cardTitle": "Maps",
+        "newMapLabel": "New map name",
+        "startMap": "Start mapping",
+        "stopMap": "Stop mapping",
+        "startMapError": "Error: couldn't start map."
+      },
+      "RelocInit": {
+        "cardTitle": "Relocalization information",
+        "newMapLabel": "New map name",
+        "startMap": "Start mapping",
+        "stopMap": "Stop mapping",
+        "startMapError": "Error: couldn't start map."
+      },
+      "SelectedMap": {
+        "labelChoose": "<No map selected for reloc>",
+        "labelChosen": "Selected map"
+      },
+      "TermsOfUse": {
+        "metaTitle": "Terms of use"
+      },
+      "PrivacyPolicy": {
+        "metaTitle": "Privacy policy"
+      }
+    }
+  }
+}
