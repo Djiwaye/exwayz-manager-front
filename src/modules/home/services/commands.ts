@@ -63,6 +63,16 @@ export function mapDelete(mapName: string): AxiosPromise<string[]> {
   });
 }
 
+export function mapVisualize(mapName: string): AxiosPromise<string[]> {
+  const resource = `${commandsEndpoint}/visualize_map/${mapName}`;
+  return axios.get(resource, {
+    withCredentials: true,
+    headers: {
+      Accept: 'application/json'
+    }
+  });
+}
+
 export function startReloc(): AxiosPromise<string> {
   const resource = `${commandsEndpoint}/reloc_start`;
   return axios.get(resource, {
