@@ -44,7 +44,7 @@ export function stopMap(): AxiosPromise<string[]> {
 }
 
 export function mapLoad(mapName: string): AxiosPromise<string[]> {
-  const resource = `${commandsEndpoint}/load_map/${mapName}`;
+  const resource = `${commandsEndpoint}/load_reloc/${mapName}`;
   return axios.get(resource, {
     withCredentials: true,
     headers: {
