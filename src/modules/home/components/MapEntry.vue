@@ -7,6 +7,9 @@
     <v-btn :disabled="disabled" color="error" @click="$emit('delete', name)" x-small class="ml-2">
       {{ $t('common.actions.delete.label') }}
     </v-btn>
+    <v-btn :disabled="disabled" @click="$emit('visualize', name)" x-small class="ml-2">
+      {{ $t('common.actions.visualize.label') }}
+    </v-btn>
   </v-sheet>
 </template>
 

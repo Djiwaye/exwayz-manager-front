@@ -44,7 +44,7 @@ export function stopMap(): AxiosPromise<string[]> {
 }
 
 export function mapLoad(mapName: string): AxiosPromise<string[]> {
-  const resource = `${commandsEndpoint}/load_map/${mapName}`;
+  const resource = `${commandsEndpoint}/load_reloc/${mapName}`;
   return axios.get(resource, {
     withCredentials: true,
     headers: {
@@ -55,6 +55,16 @@ export function mapLoad(mapName: string): AxiosPromise<string[]> {
 
 export function mapDelete(mapName: string): AxiosPromise<string[]> {
   const resource = `${commandsEndpoint}/delete_map/${mapName}`;
+  return axios.get(resource, {
+    withCredentials: true,
+    headers: {
+      Accept: 'application/json'
+    }
+  });
+}
+
+export function mapVisualize(mapName: string): AxiosPromise<string[]> {
+  const resource = `${commandsEndpoint}/visualize_map/${mapName}`;
   return axios.get(resource, {
     withCredentials: true,
     headers: {

@@ -42,6 +42,7 @@
           :name="map"
           @load="onMapLoad"
           @delete="onMapDelete"
+          @visualize="onMapVisualize"
         />
       </v-sheet>
     </v-card-text>
@@ -101,6 +102,10 @@ export default class MapSelect extends Vue {
   protected onMapDelete(value: string): void {
     CommandsService.mapDelete(value);
     setTimeout(this.reloadMaps, 1000);
+  }
+
+  protected onMapVisualize(value: string): void {
+    CommandsService.mapVisualize(value);
   }
 
   protected reloadMaps(): void {
