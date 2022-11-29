@@ -106,7 +106,6 @@ export default class MapSelect extends Vue {
 
   protected onMapVisualize(value: string): void {
     CommandsService.mapVisualize(value);
-    // setTimeout(this.reloadMaps, 1000);
   }
 
   protected reloadMaps(): void {
