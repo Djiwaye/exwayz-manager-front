@@ -13,6 +13,26 @@ export function availableMaps(): AxiosPromise<string[]> {
   });
 }
 
+export function availableProfiles(): AxiosPromise<string[]> {
+  const resource = `${statusEndpoint}/available_profiles`;
+  return axios.get(resource, {
+    withCredentials: true,
+    headers: {
+      Accept: 'application/json'
+    }
+  });
+}
+
+export function availableStates(): AxiosPromise<string[]> {
+  const resource = `${statusEndpoint}/available_states`;
+  return axios.get(resource, {
+    withCredentials: true,
+    headers: {
+      Accept: 'application/json'
+    }
+  });
+}
+
 export function getManagerState(): AxiosPromise<string> {
   const resource = `${statusEndpoint}/state`;
   return axios.get(resource, {
