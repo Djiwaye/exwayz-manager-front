@@ -1,9 +1,10 @@
 <template>
   <v-sheet class="pa-2 d-flex">
     <div class="text-body-1">{{ state }}</div>
+    <!-- TODO: Add a way to change the profile name here-->
     <div class="text-body-2">{{ profile }}</div>
     <v-btn @click="$emit('set', state, profile)" x-small class="ml-2">
-      {{ $t('common.actions.set.label') }}
+      {{ $t('common.actions.send.label') }}
     </v-btn>
   </v-sheet>
 </template>
