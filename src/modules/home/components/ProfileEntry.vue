@@ -1,11 +1,14 @@
 <template>
   <v-sheet class="pa-2 d-flex">
-    <div class="text-body-1">{{ state }}</div>
-    <!-- TODO: Add a way to change the profile name here-->
-    <div class="text-body-2">{{ profile }}</div>
-    <v-btn @click="$emit('set', state, profile)" x-small class="ml-2">
-      {{ $t('common.actions.send.label') }}
-    </v-btn>
+    <div class="profile-name d-flex align-center text-body-1">{{ name }}</div>
+    <v-select
+      class="mt-0"
+      @input="onInput"
+      :items="options"
+      dense
+      hide-details
+      :label="$t('home.ProfileEntry.selectLabel')"
+    ></v-select>
   </v-sheet>
 </template>
 
@@ -17,10 +20,19 @@ import { Component, Vue, Prop } from 'vue-property-decorator';
 })
 export default class ProfileEntry extends Vue {
   @Prop({ required: true })
-  protected state!: string;
+  protected name!: string;
   @Prop({ required: true })
-  protected profile!: string;
+  protected options!: string[];
+
+  protected onInput(value: string): void {
+    const newProfile = { name: this.name, value };
+    this.$emit('input', newProfile);
+  }
 }
 </script>
 
-<style scoped lang="scss"></style>
+<style scoped lang="scss">
+.profile-name {
+  width: 100px;
+}
+</style>

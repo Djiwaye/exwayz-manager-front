@@ -9,7 +9,7 @@
       <v-col class="container">
         <MapSelect />
         <RelocInit />
-        <ProfileSetting />
+        <ProfileSelect />
       </v-col>
     </v-row>
   </div>
@@ -21,10 +21,10 @@ import ManagerState from '@/modules/home/components/ManagerState.vue';
 import SlamActions from '@/modules/home/components/SlamActions.vue';
 import MapSelect from '@/modules/home/components/MapSelect.vue';
 import RelocInit from '@/modules/home/components/RelocInit.vue';
-import ProfileSetting from '@/modules/home/components/ProfileSetting.vue';
+import ProfileSelect from '@/modules/home/components/ProfileSelect.vue';
 
 @Component({
-  components: { ManagerState, SlamActions, MapSelect, RelocInit, ProfileSetting }
+  components: { ManagerState, SlamActions, MapSelect, RelocInit, ProfileSelect }
 })
 export default class LandingPage extends Vue {}
 </script>
