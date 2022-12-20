@@ -8,8 +8,8 @@
           v-for="(item, index) in availableProfilesOptions"
           class="mt-2"
           :key="index"
-          :name="item.profileName"
-          :options="item.options"
+          :name="item.algo"
+          :options="item.values"
           @input="onSetProfile"
         />
       </v-sheet>
@@ -20,7 +20,7 @@
 <script lang="ts">
 import { Component, Vue } from 'vue-property-decorator';
 import { ProfileOptions } from '@/modules/home/models/dto/profileOptions';
-// import * as CommandsService from '@/modules/home/services/commands';
+ import * as CommandsService from '@/modules/home/services/commands';
 import * as StatusService from '@/modules/home/services/status';
 import ProfileEntry from '@/modules/home/components/ProfileEntry.vue';
 
@@ -37,7 +37,7 @@ export default class ProfileSelect extends Vue {
   }
 
   protected onSetProfile(newProfile: { name: string; value: string }): void {
-    // TODO: call set Profile here and remove console.log
+    CommandsService.setProfile(newProfile.name, newProfile.value);
     console.log(newProfile);
   }
 }

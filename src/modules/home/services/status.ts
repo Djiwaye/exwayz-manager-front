@@ -1,6 +1,7 @@
 import axios, { AxiosPromise } from 'axios';
 import appConfig from '@/config';
 import { ProfileOptions } from '@/modules/home/models/dto/profileOptions';
+import { ProfileCurrent } from '@/modules/home/models/dto/profileCurrent';
 
 const statusEndpoint = `${appConfig.api.url}${appConfig.api.endpoints.status}`;
 
@@ -15,7 +16,7 @@ export function availableMaps(): AxiosPromise<string[]> {
 }
 
 export function availableProfilesOptions(): AxiosPromise<ProfileOptions[]> {
-  const resource = `${statusEndpoint}/available_profiles_options`;
+  const resource = `${statusEndpoint}/all_profiles`;
   return axios.get(resource, {
     withCredentials: true,
     headers: {
@@ -24,8 +25,8 @@ export function availableProfilesOptions(): AxiosPromise<ProfileOptions[]> {
   });
 }
 
-export function availableProfiles(): AxiosPromise<string[]> {
-  const resource = `${statusEndpoint}/available_profiles`;
+export function availableProfiles(): AxiosPromise<ProfileCurrent[]> {
+  const resource = `${statusEndpoint}/current_profiles`;
   return axios.get(resource, {
     withCredentials: true,
     headers: {
@@ -34,15 +35,6 @@ export function availableProfiles(): AxiosPromise<string[]> {
   });
 }
 
-export function availableStates(): AxiosPromise<string[]> {
-  const resource = `${statusEndpoint}/available_states`;
-  return axios.get(resource, {
-    withCredentials: true,
-    headers: {
-      Accept: 'application/json'
-    }
-  });
-}
 
 export function getManagerState(): AxiosPromise<string> {
   const resource = `${statusEndpoint}/state`;
