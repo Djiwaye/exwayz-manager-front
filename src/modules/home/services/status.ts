@@ -15,7 +15,7 @@ export function availableMaps(): AxiosPromise<string[]> {
   });
 }
 
-export function availableProfilesOptions(): AxiosPromise<ProfileOptions[]> {
+export function allProfiles(): AxiosPromise<ProfileOptions[]> {
   const resource = `${statusEndpoint}/all_profiles`;
   return axios.get(resource, {
     withCredentials: true,
@@ -25,7 +25,7 @@ export function availableProfilesOptions(): AxiosPromise<ProfileOptions[]> {
   });
 }
 
-export function availableProfiles(): AxiosPromise<ProfileCurrent[]> {
+export function currentProfiles(): AxiosPromise<ProfileCurrent[]> {
   const resource = `${statusEndpoint}/current_profiles`;
   return axios.get(resource, {
     withCredentials: true,

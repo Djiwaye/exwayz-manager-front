@@ -1,6 +1,9 @@
 <template>
-  <v-sheet class="pa-2 d-flex">
-    <div class="profile-name d-flex align-center text-body-1">{{ name }}</div>
+  <v-sheet class="pr-2 d-flex">
+    <div
+      class="profile-name d-flex align-center text-body-1">
+        {{ name }}
+    </div>
     <v-select
       class="mt-0"
       @input="onInput"
