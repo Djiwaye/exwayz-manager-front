@@ -102,3 +102,13 @@ export function initReloc(x: string, y: string, z: string, angle: string): Axios
     }
   });
 }
+
+export function setProfile(state: string, profile: string): AxiosPromise<string> {
+  const resource = `${commandsEndpoint}/set_profile?algo=${state}&value=${profile}`;
+  return axios.get(resource, {
+    withCredentials: true,
+    headers: {
+      Accept: 'application/json'
+    }
+  });
+}

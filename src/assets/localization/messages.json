@@ -166,6 +166,12 @@
         "stopMap": "Stop mapping",
         "startMapError": "Error: couldn't start map."
       },
+      "ProfileSelect": {
+        "cardTitle": "Profile settings"
+      },
+      "ProfileEntry": {
+        "selectLabel": "Select profile"
+      },
       "RelocInit": {
         "cardTitle": "Relocalization information",
         "newMapLabel": "New map name",
