@@ -4,7 +4,7 @@ import appConfig from '@/config';
 const commandsEndpoint = `${appConfig.api.url}${appConfig.api.endpoints.commands}`;
 
 export function startSlam(vis: string): AxiosPromise<string[]> {
-  const resource = `${commandsEndpoint}/start/${vis}`;
+  const resource = `${commandsEndpoint}/start?vis=${vis}`;
   return axios.get(resource, {
     withCredentials: true,
     headers: {
@@ -64,7 +64,7 @@ export function mapDelete(mapName: string): AxiosPromise<string[]> {
 }
 
 export function startReloc(vis: string): AxiosPromise<string> {
-  const resource = `${commandsEndpoint}/reloc_start/${vis}`;
+  const resource = `${commandsEndpoint}/reloc_start?vis=${vis}`;
   return axios.get(resource, {
     withCredentials: true,
     headers: {

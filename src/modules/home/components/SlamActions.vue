@@ -21,6 +21,7 @@
       >
         {{ $t('home.SlamActions.stopSlam') }}
       </v-btn>
+      <v-checkbox v-model="visParam" :label="$t('home.SlamActions.checkboxVis')" />
     </v-card-text>
   </v-card>
 </template>
@@ -45,13 +46,14 @@ export default class SlamActions extends Vue {
   protected setSelectedMap!: (value: string | null) => void;
   @Action('home/waitForState')
   protected waitForState!: (waitingState: string) => Promise<void>;
+  protected visParam = false;
 
   protected startSlam(): void {
     if (this.selectedMap) {
-      CommandsService.startReloc('false');
+      CommandsService.startReloc(this.visParam ? 'true' : 'false');
       this.waitForState('LOCALIZING');
     } else {
-      CommandsService.startSlam('false');
+      CommandsService.startSlam(this.visParam ? 'true' : 'false');
       this.waitForState('SLAM');
     }
   }

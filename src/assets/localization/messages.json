@@ -153,7 +153,8 @@
       "SlamActions": {
         "cardTitle": "SLAM actions",
         "startSlam": "Start",
-        "stopSlam": "Stop"
+        "stopSlam": "Stop",
+        "checkboxVis": "Display map in RViz"
       },
       "MapSelect": {
         "cardTitle": "Maps",
