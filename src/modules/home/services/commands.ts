@@ -3,8 +3,8 @@ import appConfig from '@/config';
 
 const commandsEndpoint = `${appConfig.api.url}${appConfig.api.endpoints.commands}`;
 
-export function startSlam(): AxiosPromise<string[]> {
-  const resource = `${commandsEndpoint}/start`;
+export function startSlam(vis: string): AxiosPromise<string[]> {
+  const resource = `${commandsEndpoint}/start/${vis}`;
   return axios.get(resource, {
     withCredentials: true,
     headers: {
@@ -23,8 +23,8 @@ export function stopSlam(): AxiosPromise<string> {
   });
 }
 
-export function startMap(mapName: string): AxiosPromise<string[]> {
-  const resource = `${commandsEndpoint}/map_start/${mapName}`;
+export function startMap(mapName: string, vis: string): AxiosPromise<string[]> {
+  const resource = `${commandsEndpoint}/map_start?mapName=${mapName}&vis=${vis}`;
   return axios.get(resource, {
     withCredentials: true,
     headers: {
@@ -63,8 +63,8 @@ export function mapDelete(mapName: string): AxiosPromise<string[]> {
   });
 }
 
-export function startReloc(): AxiosPromise<string> {
-  const resource = `${commandsEndpoint}/reloc_start`;
+export function startReloc(vis: string): AxiosPromise<string> {
+  const resource = `${commandsEndpoint}/reloc_start/${vis}`;
   return axios.get(resource, {
     withCredentials: true,
     headers: {

@@ -11,8 +11,8 @@
         ></v-text-field>
         <v-btn
           width="150"
-          v-show="currentManagerState !== 'MAPPING'"
-          :loading="waitingForManagerState === 'MAPPING'"
+          v-show="currentManagerState !== 'RECORD'"
+          :loading="waitingForManagerState === 'RECORD'"
           :disabled="!isIdle()"
           @click="startMap"
           class="ml-4"
@@ -22,7 +22,7 @@
         </v-btn>
         <v-btn
           width="150"
-          v-show="currentManagerState === 'MAPPING'"
+          v-show="currentManagerState === 'RECORD'"
           :loading="waitingForManagerState === 'IDLE'"
           @click="stopMap"
           class="ml-4"
@@ -79,8 +79,8 @@ export default class MapSelect extends Vue {
   protected startMap(): void {
     this.displayStartMapError = false;
     if (this.inputMapName.length > 0) {
-      CommandsService.startMap(this.inputMapName).catch(() => (this.displayStartMapError = true));
-      this.waitForState('MAPPING');
+      CommandsService.startMap(this.inputMapName, 'false').catch(() => (this.displayStartMapError = true));
+      this.waitForState('RECORD');
     } else {
       this.displayStartMapError = true;
     }

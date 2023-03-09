@@ -40,10 +40,12 @@ export default class ManagerState extends Vue {
       return 'var(--v-primary-base)';
     } else if (this.currentManagerState === 'LOCALIZING' || this.currentManagerState === 'SLAM') {
       return 'var(--v-secondary-base)';
-    } else if (this.currentManagerState === 'MAPPING') {
+    } else if (this.currentManagerState === 'RECORD') {
       return 'var(--v-secondary-base)';
-    } else if (this.currentManagerState === 'SAVING_MAP') {
+    } else if (this.currentManagerState === 'CREATE_MAP') {
       return 'var(--v-accent-base)';
+    } else if (this.currentManagerState === 'ERROR') {
+      return 'var(--v-red-base)';
     }
 
     return 'var(--v-grey-base)';

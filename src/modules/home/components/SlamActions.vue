@@ -29,6 +29,7 @@
 import { Component, Vue } from 'vue-property-decorator';
 import { State, Mutation, Action } from 'vuex-class';
 import * as CommandsService from '@/modules/home/services/commands';
+// import VisuSelect from '@/modules/home/components/VisuSelect.vue';
 
 @Component({
   components: {}
@@ -47,10 +48,10 @@ export default class SlamActions extends Vue {
 
   protected startSlam(): void {
     if (this.selectedMap) {
-      CommandsService.startReloc();
+      CommandsService.startReloc('false');
       this.waitForState('LOCALIZING');
     } else {
-      CommandsService.startSlam();
+      CommandsService.startSlam('false');
       this.waitForState('SLAM');
     }
   }
