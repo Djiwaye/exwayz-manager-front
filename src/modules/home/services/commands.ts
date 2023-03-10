@@ -43,6 +43,16 @@ export function stopMap(): AxiosPromise<string[]> {
   });
 }
 
+export function stopAll(): AxiosPromise<string[]> {
+  const resource = `${commandsEndpoint}/stop_all`;
+  return axios.get(resource, {
+    withCredentials: true,
+    headers: {
+      Accept: 'application/json'
+    }
+  });
+}
+
 export function mapLoad(mapName: string): AxiosPromise<string[]> {
   const resource = `${commandsEndpoint}/load_map/${mapName}`;
   return axios.get(resource, {

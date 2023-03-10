@@ -59,18 +59,27 @@ export default class SlamActions extends Vue {
   }
 
   protected stopSlam(): void {
-    if (this.selectedMap) {
-      CommandsService.stopReloc();
+    if (this.isError()) {
+      CommandsService.stopAll();
       this.waitForState('IDLE');
-      this.setSelectedMap(null);
     } else {
-      CommandsService.stopSlam();
-      this.waitForState('IDLE');
+      if (this.selectedMap) {
+        CommandsService.stopReloc();
+        this.waitForState('IDLE');
+        this.setSelectedMap(null);
+      } else {
+        CommandsService.stopSlam();
+        this.waitForState('IDLE');
+      }
     }
   }
 
   protected isActive(): boolean {
-    return this.currentManagerState === 'LOCALIZING' || this.currentManagerState === 'SLAM';
+    return this.currentManagerState === 'LOCALIZING' || this.currentManagerState === 'SLAM' ||  this.currentManagerState === 'ERROR';
+  }
+
+  protected isError(): boolean {
+    return this.currentManagerState === 'ERROR';
   }
 
   protected isReadyToStart(): boolean {
