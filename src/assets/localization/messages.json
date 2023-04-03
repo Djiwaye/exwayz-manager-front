@@ -161,7 +161,8 @@
         "newMapLabel": "New map name",
         "startMap": "Start mapping",
         "stopMap": "Stop mapping",
-        "startMapError": "Error: couldn't start map."
+        "startMapError": "Error: couldn't start map.",
+        "checkboxVis": "Display current frame in RViz"
       },
       "ProfileSelect": {
         "cardTitle": "Profile settings"

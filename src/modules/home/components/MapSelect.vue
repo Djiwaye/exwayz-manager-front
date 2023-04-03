@@ -30,6 +30,7 @@
           >{{ $t('home.MapSelect.stopMap') }}</v-btn
         >
       </div>
+      <v-checkbox v-model="visParam" :label="$t('home.MapSelect.checkboxVis')" />
       <div style="height: 40px">
         <div class="error--text" v-show="displayStartMapError">{{ $t('home.MapSelect.startMapError') }}</div>
       </div>
@@ -71,6 +72,7 @@ export default class MapSelect extends Vue {
   protected mapFiles: string[] = [];
   protected inputMapName = '';
   protected displayStartMapError = false;
+  protected visParam = false;
 
   protected mounted(): void {
     this.reloadMaps();
@@ -79,7 +81,7 @@ export default class MapSelect extends Vue {
   protected startMap(): void {
     this.displayStartMapError = false;
     if (this.inputMapName.length > 0) {
-      CommandsService.startMap(this.inputMapName, 'false').catch(() => (this.displayStartMapError = true));
+      CommandsService.startMap(this.inputMapName, this.visParam ? 'true' : 'false').catch(() => (this.displayStartMapError = true));
       this.waitForState('RECORD');
     } else {
       this.displayStartMapError = true;
