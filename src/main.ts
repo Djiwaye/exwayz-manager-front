@@ -51,17 +51,10 @@ function isIE11(): boolean {
   return false;
 }
 
-function validateConfig(config: AppConfig) {
-  if (config.api.hostname === undefined || config.api.protocol === undefined) {
-    throw new Error('INVALID_APP_CONFIG');
-  }
-}
-
 try {
   if (isIE11()) {
     throw new Error('IE11');
   }
-  validateConfig(appConfig);
   initApp().catch((error) => {
     renderError(error, i18n);
   });
