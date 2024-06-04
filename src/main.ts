@@ -7,7 +7,6 @@ import messages from '@/assets/localization/messages.json';
 import App from '@/App.vue';
 import router from '@/router';
 import store from '@/store';
-import appConfig, { AppConfig } from '@/config';
 import { renderError } from '@/helpers/renderErrorPage';
 import LowerCaseFilter from '@/filters/lowercase';
 import { dateUtils } from '@/mixins/dateUtils';

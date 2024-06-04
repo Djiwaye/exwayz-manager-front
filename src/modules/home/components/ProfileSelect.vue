@@ -3,10 +3,7 @@
     <v-card-title>{{ $t('home.ProfileSelect.cardTitle') }}</v-card-title>
     <v-card-text>
       <v-sheet elevation="2" class="mt-4 pa-2">
-        <div
-          v-for="(item, index) in currentProfiles"
-          class="text-body-1"
-          :key="index">
+        <div v-for="(item, index) in currentProfiles" class="text-body-1" :key="index">
           {{ item.algo }} - {{ item.value }}
         </div>
       </v-sheet>
@@ -28,7 +25,7 @@
 import { Component, Vue } from 'vue-property-decorator';
 import { ProfileOptions } from '@/modules/home/models/dto/profileOptions';
 import { ProfileCurrent } from '@/modules/home/models/dto/profileCurrent';
- import * as CommandsService from '@/modules/home/services/commands';
+import * as CommandsService from '@/modules/home/services/commands';
 import * as StatusService from '@/modules/home/services/status';
 import ProfileEntry from '@/modules/home/components/ProfileEntry.vue';
 

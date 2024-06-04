@@ -5,4 +5,3 @@ export interface ProfileCurrent {
   algo: string;
   value: string;
 }
-

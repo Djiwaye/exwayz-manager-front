@@ -35,7 +35,6 @@ export function currentProfiles(): AxiosPromise<ProfileCurrent[]> {
   });
 }
 
-
 export function getManagerState(): AxiosPromise<string> {
   const resource = `${statusEndpoint}/state`;
   return axios.get(resource, {

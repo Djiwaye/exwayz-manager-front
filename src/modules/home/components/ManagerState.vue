@@ -38,7 +38,7 @@ export default class ManagerState extends Vue {
       return 'var(--v-grey-base)';
     } else if (this.currentManagerState === 'ERROR') {
       return 'var(--v-error-base)';
-    }  else if (this.currentManagerState === 'IDLE' || this.currentManagerState === 'RELOC_READY') {
+    } else if (this.currentManagerState === 'IDLE' || this.currentManagerState === 'RELOC_READY') {
       return 'var(--v-primary-base)';
     } else if (this.currentManagerState === 'LOCALIZING' || this.currentManagerState === 'SLAM') {
       return 'var(--v-secondary-base)';
